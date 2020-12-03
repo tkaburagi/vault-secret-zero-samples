@@ -10,7 +10,6 @@ RUN mv vault /bin/vault
 ENV VTOKEN=s.H2xyNhkuPsNFXy7FQ9IQ5jEf
 ENV VADDR=http://192.168.100.121:8200
 RUN VAULT_ADDR=$VADDR VAULT_TOKEN=$VTOKEN vault read -format=json auth/approle/role/kv-full/role-id | jq -r '.data.role_id' > /role-id
-RUN ls /
 ARG JAR_FILE=app/target/*.jar
 COPY ${JAR_FILE} app.jar
 ENTRYPOINT ["java","-jar","/app.jar"]

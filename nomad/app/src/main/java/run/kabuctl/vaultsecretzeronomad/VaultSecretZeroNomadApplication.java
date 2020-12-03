@@ -31,7 +31,7 @@ class AppController {
         String secrets_dir = System.getenv("NOMAD_SECRETS_DIR");
         String task_dir = System.getenv("NOMAD_TASK_DIR");
 
-        String task_dir_replaced = task_dir.replace("hello-vault/local", "hello-vault");
+        String task_dir_replaced = task_dir.replace("vault-secret-zero/local", "vault-secret-zero/");
 
         System.out.println(" SECRETS_DIR ="  + secrets_dir);
         System.out.println(" NOMAD_TASK_DIR ="  + task_dir_replaced);

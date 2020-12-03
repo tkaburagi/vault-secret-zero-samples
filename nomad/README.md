@@ -1,3 +1,6 @@
+## Diagram
+![](../nomad.png)
+
 ## Nomad server and client config
 
 ```hcl

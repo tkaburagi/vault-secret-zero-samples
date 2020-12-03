@@ -5,12 +5,9 @@ job "vault-secret-zero" {
 
   group "vault-secret-zero" {
     task "vault-secret-zero" {
-      env {
-        VAULT_ADDR = "http://127.0.0.1:8200"
-      }
       driver = "java"
       config {
-        jar_path    = "/Users/kabu/hashicorp/intellij/vault-secret-zero-nomad/target/vault-secret-zero-nomad-0.0.1-SNAPSHOT.jar"
+        jar_path    = "/Users/kabu/hashicorp/vault/secret-zero/nomad/app/target/vault-secret-zero-nomad-0.0.1-SNAPSHOT.jar"
         jvm_options = ["-Xmx2048m", "-Xms256m"]
       }
       vault {
